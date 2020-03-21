@@ -106,4 +106,4 @@ data_files <- file.path(dir, "data",
 git2r::add(dir, path = data_files)
 
 git2r::commit(dir, message = "auto update")
-git2r::push(dir)
+system(paste("git push", dir))
