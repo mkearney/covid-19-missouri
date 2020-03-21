@@ -76,3 +76,11 @@ write.csv(d$by_county, save_as("mo-county"), na = "", row.names = FALSE)
 write.csv(d$by_age, save_as("mo-age"), na = "", row.names = FALSE)
 write.csv(d$by_transmission, save_as("mo-transmission"), na = "", row.names = FALSE)
 
+git2r::add("/home/kmw/rstats/covid-19-missouri",
+  path = c(save_as("mo-total"),
+    save_as("mo-county"),
+    save_as("mo-age"),
+    save_as("mo-transmission")))
+
+git2r::commit("/home/kmw/rstats/covid-19-missouri", message = "auto update")
+git2r::push("/home/kmw/rstats/covid-19-missouri")
