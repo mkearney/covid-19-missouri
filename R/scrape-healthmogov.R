@@ -5,6 +5,9 @@
 ## i like data.table right now
 library(data.table)
 
+## local file location
+dir <- "/home/kmw/rstats/covid-19-missouri"
+
 ## data collection time info (couldn't find timestamp on website)
 time_stamp <- Sys.time()
 time_stamp_utc <- as.POSIXct(format(time_stamp, tz = "UTC"), tz = "UTC")
@@ -68,19 +71,39 @@ d <- list(
 ##                                 write CSVs                                 ##
 ##----------------------------------------------------------------------------##
 
-save_as <- function(x) file.path("/home/kmw/rstats/covid-19-missouri/data",
-  format(Sys.time(), paste0(x, "-%Y-%m-%d-%I%P.csv")))
+d$by_state <- rbind(
+  d$by_state,
+  readr::read_csv(file.path(dir, "data", "mo-total.csv"))
+)
+d$by_county <- rbind(
+  d$by_county,
+  readr::read_csv(file.path(dir, "data", "mo-county.csv"))
+)
+d$by_age <- rbind(
+  d$by_age,
+  readr::read_csv(file.path(dir, "data", "mo-age.csv"))
+)
+d$by_transmission <- rbind(
+  d$by_transmission,
+  readr::read_csv(file.path(dir, "data", "mo-transmission.csv"))
+)
 
-write.csv(d$by_state, save_as("mo-total"), na = "", row.names = FALSE)
-write.csv(d$by_county, save_as("mo-county"), na = "", row.names = FALSE)
-write.csv(d$by_age, save_as("mo-age"), na = "", row.names = FALSE)
-write.csv(d$by_transmission, save_as("mo-transmission"), na = "", row.names = FALSE)
+write.csv(d$by_state, 
+  file.path(dir, "data", "mo-total.csv"),
+  na = "", row.names = FALSE)
+write.csv(d$by_county,
+  file.path(dir, "data", "mo-county.csv"),
+  na = "", row.names = FALSE)
+write.csv(d$by_age,
+  file.path(dir, "data", "mo-age.csv"),
+  na = "", row.names = FALSE)
+write.csv(d$by_transmission,
+  file.path(dir, "data", "mo-transmission.csv"),
+  na = "", row.names = FALSE)
 
-git2r::add("/home/kmw/rstats/covid-19-missouri",
-  path = c(save_as("mo-total"),
-    save_as("mo-county"),
-    save_as("mo-age"),
-    save_as("mo-transmission")))
+data_files <- file.path(dir, "data",
+  paste0("mo-", c("total", "county", "age", "transmission"), ".csv"))
+git2r::add(dir, path = data_files)
 
-git2r::commit("/home/kmw/rstats/covid-19-missouri", message = "auto update")
-git2r::push("/home/kmw/rstats/covid-19-missouri")
+git2r::commit(dir, message = "auto update")
+git2r::push(dir)
