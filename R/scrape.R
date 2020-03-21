@@ -10,7 +10,7 @@ dir <- "/home/kmw/rstats/covid-19-missouri"
 
 ## data collection time info (couldn't find timestamp on website)
 time_stamp <- Sys.time()
-time_stamp_utc <- as.POSIXct(format(time_stamp, tz = "UTC"), tz = "UTC")
+#time_stamp_utc <- as.POSIXct(format(time_stamp, tz = "UTC"), tz = "UTC")
 
 ## no fips code because i'm lazy and don't have them for counties
 state_info <- data.table(
@@ -55,8 +55,7 @@ meta <- data.table(
   travel_related = sum(d3[transmission == "travel", cases]),
   contact_related = sum(d3[transmission == "contact", cases]),
   unknown_related = sum(d3[transmission == "unknown", cases]),
-  time = time_stamp,
-  time_utc = time_stamp_utc
+  time = time_stamp
 )
 
 ## all data
@@ -88,18 +87,10 @@ d$by_transmission <- rbind(
   readr::read_csv(file.path(dir, "data", "mo-transmission.csv"))
 )
 
-write.csv(d$by_state, 
-  file.path(dir, "data", "mo-total.csv"),
-  na = "", row.names = FALSE)
-write.csv(d$by_county,
-  file.path(dir, "data", "mo-county.csv"),
-  na = "", row.names = FALSE)
-write.csv(d$by_age,
-  file.path(dir, "data", "mo-age.csv"),
-  na = "", row.names = FALSE)
-write.csv(d$by_transmission,
-  file.path(dir, "data", "mo-transmission.csv"),
-  na = "", row.names = FALSE)
+readr::write_csv(d$by_state, file.path(dir, "data", "mo-total.csv"))
+readr::write_csv(d$by_county, file.path(dir, "data", "mo-county.csv"))
+readr::write_csv(d$by_age, file.path(dir, "data", "mo-age.csv"))
+readr::write_csv(d$by_transmission, file.path(dir, "data", "mo-transmission.csv"))
 
 data_files <- file.path(dir, "data",
   paste0("mo-", c("total", "county", "age", "transmission"), ".csv"))

@@ -1,46 +1,16 @@
-"state","state_abb","county","state_lab","other_lab"
-"Missouri","MO","Boone",1,7
-"Missouri","MO","Cass",2,4
-"Missouri","MO","Christian",1,0
-"Missouri","MO","Cole",2,1
-"Missouri","MO","Dunklin",0,1
-"Missouri","MO","Greene",8,0
-"Missouri","MO","Henry",1,0
-"Missouri","MO","Jackson",1,4
-"Missouri","MO","Kansas City",0,12
-"Missouri","MO","Pulaski",0,1
-"Missouri","MO","Scott",0,1
-"Missouri","MO","St. Charles",1,1
-"Missouri","MO","St. Louis City",4,2
-"Missouri","MO","St. Louis County",10,2
-"Missouri","MO","TBD",0,2
-"Missouri","MO","Boone",1,7
-"Missouri","MO","Cass",2,4
-"Missouri","MO","Christian",1,0
-"Missouri","MO","Cole",2,1
-"Missouri","MO","Dunklin",0,1
-"Missouri","MO","Greene",8,0
-"Missouri","MO","Henry",1,0
-"Missouri","MO","Jackson",1,4
-"Missouri","MO","Kansas City",0,12
-"Missouri","MO","Pulaski",0,1
-"Missouri","MO","Scott",0,1
-"Missouri","MO","St. Charles",1,1
-"Missouri","MO","St. Louis City",4,2
-"Missouri","MO","St. Louis County",10,2
-"Missouri","MO","TBD",0,2
-"Missouri","MO","Boone",1,7
-"Missouri","MO","Cass",2,4
-"Missouri","MO","Christian",1,0
-"Missouri","MO","Cole",2,1
-"Missouri","MO","Dunklin",0,1
-"Missouri","MO","Greene",8,0
-"Missouri","MO","Henry",1,0
-"Missouri","MO","Jackson",1,4
-"Missouri","MO","Kansas City",0,12
-"Missouri","MO","Pulaski",0,1
-"Missouri","MO","Scott",0,1
-"Missouri","MO","St. Charles",1,1
-"Missouri","MO","St. Louis City",4,2
-"Missouri","MO","St. Louis County",10,2
-"Missouri","MO","TBD",0,2
+state,state_abb,county,state_lab,other_lab
+Missouri,MO,Boone,1,7
+Missouri,MO,Cass,2,4
+Missouri,MO,Christian,1,0
+Missouri,MO,Cole,2,1
+Missouri,MO,Dunklin,0,1
+Missouri,MO,Greene,8,0
+Missouri,MO,Henry,1,0
+Missouri,MO,Jackson,1,4
+Missouri,MO,Kansas City,0,12
+Missouri,MO,Pulaski,0,1
+Missouri,MO,Scott,0,1
+Missouri,MO,St. Charles,1,1
+Missouri,MO,St. Louis City,4,2
+Missouri,MO,St. Louis County,10,2
+Missouri,MO,TBD,0,2
