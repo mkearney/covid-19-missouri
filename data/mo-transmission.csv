@@ -1,7 +1,4 @@
-state,state_abb,transmission,cases
-Missouri,MO,travel,22
-Missouri,MO,contact,7
-Missouri,MO,unknown,44
-Missouri,MO,travel,22
-Missouri,MO,contact,7
-Missouri,MO,unknown,44
+state,state_abb,transmission,cases,.timestamp
+Missouri,MO,travel,22,2020-03-21T23:27:29Z
+Missouri,MO,contact,7,2020-03-21T23:27:29Z
+Missouri,MO,unknown,44,2020-03-21T23:27:29Z

@@ -34,16 +34,19 @@ d1 <- as.data.table(dats[[1]])
 names(d1) <- c("county", "state_lab", "other_lab")
 d1[, state_lab := ifelse(is.na(state_lab), 0L, state_lab)]
 d1[, other_lab := ifelse(is.na(other_lab), 0L, other_lab)]
+d1[, .timestamp := time_stamp]
 
 ## by age
 d2 <- as.data.table(dats[[2]])
 names(d2) <- c("age_range", "cases")
 d2[, age_range := sub("Under 20", "0-20", age_range)]
+d2[, .timestamp := time_stamp]
 
 ## by transmission type
 d3 <- as.data.table(dats[[3]])
 names(d3) <- c("transmission", "cases")
 d3[, transmission := tolower(transmission)]
+d3[, .timestamp := time_stamp]
 
 ## by state (total)
 meta <- data.table(
