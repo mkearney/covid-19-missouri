@@ -22,10 +22,37 @@ scrape updates from [health.mo.gov](https://health.mo.gov).
 
 ## Data
 
-Data are saved as CSV files with each row representing a new observation (new
-iteration of the scraper):
+Data are saved as CSV files with each row representing a new observation at the
+state or county level:
 
 + [State-wide totals](data/mo-total.csv)
 + [Cases by county](data/mo-county.csv)
-+ [Cases by age](data/mo-age.csv)
-+ [Cases by transmission](data/mo-transmission.csv)
+
+```{r}
+## state totals daya
+suppressMessages(readr::read_csv("data/mo-total.csv"))
+
+## county data
+suppressMessages(readr::read_csv("data/mo-county.csv"))
+```
+
+
+```{r, echo=FALSE}
+mo <- suppressMessages(readr::read_csv("data/mo-total.csv"))
+library(ggplot2)
+p <- ggplot(mo, aes(x = .timestamp, y = total_cases)) +
+  geom_point() +
+  geom_line() +
+  ylim(0, NA) +
+  labs(x = "Date", y = "Number of Cases",
+    title = "COVID-19 in Missouri: Number of Reported Cases",
+    subtitle = paste0("Data from Missouri Department of Health and Senior Services (health.mo.gov) as of ", format(Sys.Date(), "%B %d, %Y")),
+    caption = dataviz::theme_mwk_caption_text()) +
+  dataviz::theme_mwk() +
+  ggsave("/home/kmw/rstats/covid-19-missouri/img/timeseries.png", 
+    width = 7, height = 5, units = "in", dpi = 312)
+```
+
+
+![](/home/kmw/rstats/covid-19-missouri/img/timeseries.png)
+

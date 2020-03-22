@@ -92,10 +92,12 @@ mo <- cbind(state_info, mo)
 ##                                 write CSVs                                 ##
 ##----------------------------------------------------------------------------##
 
-mo <- rbind(mo, readr::read_csv(file.path(dir, "data", "mo-total.csv")))
+mo <- dplyr::bind_rows(mo, readr::read_csv(file.path(dir, "data", "mo-total.csv")))
 readr::write_csv(mo, file.path(dir, "data", "mo-total.csv"))
-d1 <- rbind(d1, readr::read_csv(file.path(dir, "data", "mo-county.csv")))
+d1 <- dplyr::bind_rows(d1, readr::read_csv(file.path(dir, "data", "mo-county.csv")))
 readr::write_csv(d1, file.path(dir, "data", "mo-county.csv"))
+
+rmarkdown::render(file.path(dir, "README.Rmd"))
 
 data_files <- file.path(dir, "data",
   paste0("mo-", c("total", "county"), ".csv"))
