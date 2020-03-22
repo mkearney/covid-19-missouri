@@ -1,4 +1,5 @@
 state,state_abb,total_cases,state_labs,other_labs,ages_0_20,ages_20_29,ages_30_39,ages_40_49,ages_50_59,ages_60_69,ages_70_plus,transmission_travel,transmission_contact,transmission_no_contact,transmission_unknown,.timestamp
+Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,7,40,2020-03-22T19:35:24Z
 Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,7,40,2020-03-22T19:33:15Z
 Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,7,40,2020-03-22T19:31:40Z
 Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,7,40,2020-03-22T19:18:00Z
