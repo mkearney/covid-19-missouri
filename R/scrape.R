@@ -98,9 +98,12 @@ d1 <- dplyr::bind_rows(d1, readr::read_csv(file.path(dir, "data", "mo-county.csv
 readr::write_csv(d1, file.path(dir, "data", "mo-county.csv"))
 
 rmarkdown::render(file.path(dir, "README.Rmd"))
-
-data_files <- file.path(dir, "data",
-  paste0("mo-", c("total", "county"), ".csv"))
+unlink(file.path(dir, "README.html"))
+#unlink("README_files", recursive = T)
+data_files <- c(file.path(dir, "data",
+  paste0("mo-", c("total", "county"), ".csv")),
+  file.path(dir, "img", "timeseries.png"),
+  file.path(dir, "README.md"))
 system(paste("cd", dir, "&&", "git add", paste(data_files, collapse = " ")))
 system(paste("cd", dir, "&&", "git commit -m \"auto update\"", dir))
 system(paste("cd", dir, "&&", "git push"))
