@@ -25,7 +25,7 @@ at the state or county level:
 ``` r
 ## state totals daya
 suppressMessages(readr::read_csv("data/mo-total.csv"))
-#> # A tibble: 6 x 17
+#> # A tibble: 7 x 17
 #>   state state_abb total_cases state_labs other_labs ages_0_20 ages_20_29
 #>   <chr> <chr>           <dbl>      <dbl>      <dbl>     <dbl>      <dbl>
 #> 1 Miss… MO                 90         38         52         1         24
@@ -34,6 +34,7 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 #> 4 Miss… MO                 90         38         52         1         24
 #> 5 Miss… MO                 90         38         52         1         24
 #> 6 Miss… MO                 90         38         52         1         24
+#> 7 Miss… MO                 90         38         52         1         24
 #> # … with 10 more variables: ages_30_39 <dbl>, ages_40_49 <dbl>,
 #> #   ages_50_59 <dbl>, ages_60_69 <dbl>, ages_70_plus <dbl>,
 #> #   transmission_travel <dbl>, transmission_contact <dbl>,
@@ -42,20 +43,20 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 
 ## county data
 suppressMessages(readr::read_csv("data/mo-county.csv"))
-#> # A tibble: 108 x 6
+#> # A tibble: 126 x 6
 #>    county    total state_lab other_lab  fips timestamp          
 #>    <chr>     <dbl>     <dbl>     <dbl> <dbl> <dttm>             
-#>  1 Bates         1         0         1 29013 2020-03-22 19:36:48
-#>  2 Boone        10         1         9 29019 2020-03-22 19:36:48
-#>  3 Cass          6         2         4 29037 2020-03-22 19:36:48
-#>  4 Christian     1         1         0 29043 2020-03-22 19:36:48
-#>  5 Cole          3         2         1 29051 2020-03-22 19:36:48
-#>  6 Dunklin       1         0         1 29069 2020-03-22 19:36:48
-#>  7 Greene       10         8         2 29077 2020-03-22 19:36:48
-#>  8 Henry         1         1         0 29083 2020-03-22 19:36:48
-#>  9 Jackson       5         1         4 29095 2020-03-22 19:36:48
-#> 10 Jasper        1         1         0 29097 2020-03-22 19:36:48
-#> # … with 98 more rows
+#>  1 Bates         1         0         1 29013 2020-03-22 19:37:50
+#>  2 Boone        10         1         9 29019 2020-03-22 19:37:50
+#>  3 Cass          6         2         4 29037 2020-03-22 19:37:50
+#>  4 Christian     1         1         0 29043 2020-03-22 19:37:50
+#>  5 Cole          3         2         1 29051 2020-03-22 19:37:50
+#>  6 Dunklin       1         0         1 29069 2020-03-22 19:37:50
+#>  7 Greene       10         8         2 29077 2020-03-22 19:37:50
+#>  8 Henry         1         1         0 29083 2020-03-22 19:37:50
+#>  9 Jackson       5         1         4 29095 2020-03-22 19:37:50
+#> 10 Jasper        1         1         0 29097 2020-03-22 19:37:50
+#> # … with 116 more rows
 ```
 
-![](/home/kmw/rstats/covid-19-missouri/img/timeseries.png)
+![](img/timeseries.png)

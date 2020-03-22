@@ -54,5 +54,5 @@ p <- ggplot(mo, aes(x = .timestamp, y = total_cases)) +
 ```
 
 
-![](/home/kmw/rstats/covid-19-missouri/img/timeseries.png)
+![](img/timeseries.png)
 
