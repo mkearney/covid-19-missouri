@@ -97,6 +97,6 @@ readr::write_csv(d$by_transmission, file.path(dir, "data", "mo-transmission.csv"
 
 data_files <- file.path(dir, "data",
   paste0("mo-", c("total", "county", "age", "transmission"), ".csv"))
-system(paste("git add", paste(data_files, collapse = " ")))
-system(paste("git commit -m \"auto update\"", dir))
+system(paste("cd", dir, "&&", "git add", paste(data_files, collapse = " ")))
+system(paste("cd", dir, "&&", "git commit -m \"auto update\"", dir))
 system(paste("cd", dir, "&&", "git push"))
