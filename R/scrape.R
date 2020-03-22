@@ -103,7 +103,8 @@ unlink(file.path(dir, "README.html"))
 data_files <- c(file.path(dir, "data",
   paste0("mo-", c("total", "county"), ".csv")),
   file.path(dir, "img", "timeseries.png"),
-  file.path(dir, "README.md"))
+  file.path(dir, "README.md"),
+  file.path(dir, "README.Rmd"))
 system(paste("cd", dir, "&&", "git add", paste(data_files, collapse = " ")))
-system(paste("cd", dir, "&&", "git commit -m \"auto update\"", dir))
+system(paste("cd", dir, "&&", "git commit --no-verify -m \"auto update\""))
 system(paste("cd", dir, "&&", "git push"))
