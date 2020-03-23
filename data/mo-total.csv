@@ -1,3 +1,4 @@
-state,state_abb,total_cases,state_labs,other_labs,ages_0_20,ages_20_29,ages_30_39,ages_40_49,ages_50_59,ages_60_69,ages_70_plus,transmission_travel,transmission_contact,transmission_no_contact,transmission_unknown,.timestamp,.last_updated
-Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,7,40,2020-03-22T23:45:21Z,2020-03-21T14:00:00Z
-Missouri,MO,69,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-21T07:51:04Z,NA
+state,state_abb,total_cases,state_labs,other_labs,ages_0_20,ages_20_29,ages_30_39,ages_40_49,ages_50_59,ages_60_69,ages_70_plus,transmission_travel,transmission_contact,transmission_no_known_contact,transmission_unknown,.timestamp,.last_updated,transmission_no_contact
+Missouri,MO,106,47,59,1,26,14,10,17,20,18,32,15,9,50,2020-03-23T13:16:01Z,2020-03-22T13:45:00Z,NA
+Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,NA,40,2020-03-22T23:45:21Z,2020-03-21T14:00:00Z,7
+Missouri,MO,69,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-21T07:51:04Z,NA,NA
