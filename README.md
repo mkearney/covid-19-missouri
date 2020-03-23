@@ -39,20 +39,20 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 
 ## county data
 suppressMessages(readr::read_csv("data/mo-county.csv"))
-#> # A tibble: 239 x 6
+#> # A tibble: 262 x 6
 #>    county    total state_lab other_lab  fips timestamp          
 #>    <chr>     <dbl>     <dbl>     <dbl> <dbl> <dttm>             
-#>  1 Adair         1         0         1 29001 2020-03-23 13:16:01
-#>  2 Bates         1         0         1 29013 2020-03-23 13:16:01
-#>  3 Boone        10         1         9 29019 2020-03-23 13:16:01
-#>  4 Camden        1         1         0 29029 2020-03-23 13:16:01
-#>  5 Cass          6         2         4 29037 2020-03-23 13:16:01
-#>  6 Christian     1         1         0 29043 2020-03-23 13:16:01
-#>  7 Cole          4         3         1 29051 2020-03-23 13:16:01
-#>  8 Dunklin       1         0         1 29069 2020-03-23 13:16:01
-#>  9 Greene       14        11         3 29077 2020-03-23 13:16:01
-#> 10 Henry         1         1         0 29083 2020-03-23 13:16:01
-#> # … with 229 more rows
+#>  1 Adair         1         0         1 29001 2020-03-23 17:16:01
+#>  2 Bates         1         0         1 29013 2020-03-23 17:16:01
+#>  3 Boone        10         1         9 29019 2020-03-23 17:16:01
+#>  4 Camden        1         1         0 29029 2020-03-23 17:16:01
+#>  5 Cass          6         2         4 29037 2020-03-23 17:16:01
+#>  6 Christian     1         1         0 29043 2020-03-23 17:16:01
+#>  7 Cole          4         3         1 29051 2020-03-23 17:16:01
+#>  8 Dunklin       1         0         1 29069 2020-03-23 17:16:01
+#>  9 Greene       14        11         3 29077 2020-03-23 17:16:01
+#> 10 Henry         1         1         0 29083 2020-03-23 17:16:01
+#> # … with 252 more rows
 ```
 
 ![](img/timeseries.png)
