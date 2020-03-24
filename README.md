@@ -25,13 +25,14 @@ at the state or county level:
 ``` r
 ## state totals daya
 suppressMessages(readr::read_csv("data/mo-total.csv"))
-#> # A tibble: 4 x 19
+#> # A tibble: 5 x 19
 #>   state state_abb total_cases state_labs other_labs ages_0_20 ages_20_29
 #>   <chr> <chr>           <dbl>      <dbl>      <dbl>     <dbl>      <dbl>
-#> 1 Miss… MO                183         47        136         3         46
-#> 2 Miss… MO                106         47         59         1         26
-#> 3 Miss… MO                 90         38         52         1         24
-#> 4 Miss… MO                 69         NA         NA        NA         NA
+#> 1 Miss… MO                255         55        200         8         60
+#> 2 Miss… MO                183         47        136         3         46
+#> 3 Miss… MO                106         47         59         1         26
+#> 4 Miss… MO                 90         38         52         1         24
+#> 5 Miss… MO                 69         NA         NA        NA         NA
 #> # … with 12 more variables: ages_30_39 <dbl>, ages_40_49 <dbl>,
 #> #   ages_50_59 <dbl>, ages_60_69 <dbl>, ages_70_plus <dbl>,
 #> #   transmission_travel <dbl>, transmission_contact <dbl>,
@@ -40,20 +41,20 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 
 ## county data
 suppressMessages(readr::read_csv("data/mo-county.csv"))
-#> # A tibble: 370 x 6
+#> # A tibble: 401 x 6
 #>    county    total state_lab other_lab  fips timestamp          
 #>    <chr>     <dbl>     <dbl>     <dbl> <dbl> <dttm>             
-#>  1 Adair         2         0         2 29001 2020-03-24 17:16:01
-#>  2 Bates         1         0         1 29013 2020-03-24 17:16:01
-#>  3 Boone        17         1        16 29019 2020-03-24 17:16:01
-#>  4 Callaway      1         0         1 29027 2020-03-24 17:16:01
-#>  5 Camden        1         1         0 29029 2020-03-24 17:16:01
-#>  6 Cass          6         2         4 29037 2020-03-24 17:16:01
-#>  7 Christian     1         1         0 29043 2020-03-24 17:16:01
-#>  8 Clinton       1         0         1 29049 2020-03-24 17:16:01
-#>  9 Cole          5         3         2 29051 2020-03-24 17:16:01
-#> 10 Dunklin       1         0         1 29069 2020-03-24 17:16:01
-#> # … with 360 more rows
+#>  1 Adair         1         0         1 29001 2020-03-24 21:16:01
+#>  2 Bates         1         0         1 29013 2020-03-24 21:16:01
+#>  3 Boone        20         1        19 29019 2020-03-24 21:16:01
+#>  4 Callaway      2         0         2 29027 2020-03-24 21:16:01
+#>  5 Camden        1         1         0 29029 2020-03-24 21:16:01
+#>  6 Cass          6         2         4 29037 2020-03-24 21:16:01
+#>  7 Christian     1         1         0 29043 2020-03-24 21:16:01
+#>  8 Clay          2         0         2 29047 2020-03-24 21:16:01
+#>  9 Clinton       1         0         1 29049 2020-03-24 21:16:01
+#> 10 Cole          5         3         2 29051 2020-03-24 21:16:01
+#> # … with 391 more rows
 ```
 
 ![](img/timeseries.png)
