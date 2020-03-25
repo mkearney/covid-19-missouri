@@ -1,6 +1,7 @@
-state,state_abb,total_cases,state_labs,other_labs,ages_0_20,ages_20_29,ages_30_39,ages_40_49,ages_50_59,ages_60_69,ages_70_plus,transmission_travel,transmission_contact,transmission_no_known_contact,transmission_unknown,.timestamp,.last_updated,transmission_no_contact
-Missouri,MO,255,55,200,8,60,34,27,51,42,33,33,19,9,194,2020-03-24T21:16:01Z,2020-03-24T08:00:00Z,NA
-Missouri,MO,183,47,136,3,46,22,18,39,30,25,32,15,9,127,2020-03-23T21:16:01Z,2020-03-23T07:00:00Z,NA
-Missouri,MO,106,47,59,1,26,14,10,17,20,18,32,15,9,50,2020-03-23T13:16:01Z,2020-03-22T13:45:00Z,NA
-Missouri,MO,90,38,52,1,24,13,9,13,17,13,31,12,NA,40,2020-03-22T23:45:21Z,2020-03-21T14:00:00Z,7
-Missouri,MO,69,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-21T07:51:04Z,NA,NA
+state,state_abb,total_cases,state_labs,other_labs,ages_Boone,ages_Greene,ages_Jackson,ages_St. Charles,ages_St. Louis City,ages_St. Louis County,transmission_under_20,transmission_x20_29,transmission_x30_39,transmission_x40_49,transmission_x50_59,transmission_x60_69,transmission_x70,.timestamp,.last_updated,ages_0_20,ages_20_29,ages_30_39,ages_40_49,ages_50_59,ages_60_69,ages_70_plus,transmission_travel,transmission_contact,transmission_no_known_contact,transmission_unknown,transmission_no_contact
+Missouri,MO,356,62,294,1,3,1,1,1,1,10,73,52,43,69,59,50,2020-03-25T21:16:01Z,2020-03-25T07:30:00Z,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Missouri,MO,255,55,200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-24T21:16:01Z,2020-03-24T08:00:00Z,8,60,34,27,51,42,33,33,19,9,194,NA
+Missouri,MO,183,47,136,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-23T21:16:01Z,2020-03-23T07:00:00Z,3,46,22,18,39,30,25,32,15,9,127,NA
+Missouri,MO,106,47,59,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-23T13:16:01Z,2020-03-22T13:45:00Z,1,26,14,10,17,20,18,32,15,9,50,NA
+Missouri,MO,90,38,52,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-22T23:45:21Z,2020-03-21T14:00:00Z,1,24,13,9,13,17,13,31,12,NA,40,7
+Missouri,MO,69,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2020-03-21T07:51:04Z,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
