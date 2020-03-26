@@ -25,15 +25,16 @@ at the state or county level:
 ``` r
 ## state totals daya
 suppressMessages(readr::read_csv("data/mo-total.csv"))
-#> # A tibble: 6 x 32
+#> # A tibble: 7 x 32
 #>   state state_abb total_cases state_labs other_labs ages_Boone ages_Greene
 #>   <chr> <chr>           <dbl>      <dbl>      <dbl>      <dbl>       <dbl>
-#> 1 Miss… MO                356         62        294          1           3
-#> 2 Miss… MO                255         55        200         NA          NA
-#> 3 Miss… MO                183         47        136         NA          NA
-#> 4 Miss… MO                106         47         59         NA          NA
-#> 5 Miss… MO                 90         38         52         NA          NA
-#> 6 Miss… MO                 69         NA         NA         NA          NA
+#> 1 Miss… MO                502         72        430          1           3
+#> 2 Miss… MO                356         62        294          1           3
+#> 3 Miss… MO                255         55        200         NA          NA
+#> 4 Miss… MO                183         47        136         NA          NA
+#> 5 Miss… MO                106         47         59         NA          NA
+#> 6 Miss… MO                 90         38         52         NA          NA
+#> 7 Miss… MO                 69         NA         NA         NA          NA
 #> # … with 25 more variables: ages_Jackson <dbl>, `ages_St. Charles` <dbl>,
 #> #   `ages_St. Louis City` <dbl>, `ages_St. Louis County` <dbl>,
 #> #   transmission_under_20 <dbl>, transmission_x20_29 <dbl>,
@@ -48,20 +49,20 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 
 ## county data
 suppressMessages(readr::read_csv("data/mo-county.csv"))
-#> # A tibble: 654 x 6
+#> # A tibble: 698 x 6
 #>    county         total state_lab other_lab  fips timestamp          
 #>    <chr>          <dbl>     <dbl>     <dbl> <dbl> <dttm>             
-#>  1 Adair              1         0         1 29001 2020-03-26 17:16:01
-#>  2 Bates              1         0         1 29013 2020-03-26 17:16:01
-#>  3 Boone             20         1        19 29019 2020-03-26 17:16:01
-#>  4 Callaway           2         0         2 29027 2020-03-26 17:16:01
-#>  5 Camden             1         1         0 29029 2020-03-26 17:16:01
-#>  6 Cape Girardeau     3         0         3 29031 2020-03-26 17:16:01
-#>  7 Cass               8         2         6 29037 2020-03-26 17:16:01
-#>  8 Christian          1         1         0 29043 2020-03-26 17:16:01
-#>  9 Clay               2         0         2 29047 2020-03-26 17:16:01
-#> 10 Clinton            1         0         1 29049 2020-03-26 17:16:01
-#> # … with 644 more rows
+#>  1 Adair              1         0         1 29001 2020-03-26 21:16:01
+#>  2 Bates              1         0         1 29013 2020-03-26 21:16:01
+#>  3 Benton             1         0         1 29015 2020-03-26 21:16:01
+#>  4 Bollinger          1         0         1 29017 2020-03-26 21:16:01
+#>  5 Boone             25         1        24 29019 2020-03-26 21:16:01
+#>  6 Callaway           2         0         2 29027 2020-03-26 21:16:01
+#>  7 Camden             1         1         0 29029 2020-03-26 21:16:01
+#>  8 Cape Girardeau     3         0         3 29031 2020-03-26 21:16:01
+#>  9 Carter             1         1         0 29035 2020-03-26 21:16:01
+#> 10 Cass               8         2         6 29037 2020-03-26 21:16:01
+#> # … with 688 more rows
 ```
 
 ![](img/timeseries.png)
