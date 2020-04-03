@@ -25,23 +25,24 @@ at the state or county level:
 ``` r
 ## state totals daya
 suppressMessages(readr::read_csv("data/mo-total.csv"))
-#> # A tibble: 14 x 50
+#> # A tibble: 15 x 50
 #>    state state_abb total_cases state_labs other_labs ages_Boone ages_Camden
 #>    <chr> <chr>           <dbl>      <dbl>      <dbl>      <dbl>       <dbl>
-#>  1 Miss… MO               1834        140       1694          1           1
-#>  2 Miss… MO               1581        135       1446          1           1
-#>  3 Miss… MO               1327        121       1206          1           1
-#>  4 Miss… MO               1039        124        915          1           1
-#>  5 Miss… MO                903         92        811          1           1
-#>  6 Miss… MO                838         98        740          1           1
-#>  7 Miss… MO                670         90        580          1          NA
-#>  8 Miss… MO                502         72        430          1          NA
-#>  9 Miss… MO                356         62        294          1          NA
-#> 10 Miss… MO                255         55        200         NA          NA
-#> 11 Miss… MO                183         47        136         NA          NA
-#> 12 Miss… MO                106         47         59         NA          NA
-#> 13 Miss… MO                 90         38         52         NA          NA
-#> 14 Miss… MO                 69         NA         NA         NA          NA
+#>  1 Miss… MO               2112        160       1952          1           1
+#>  2 Miss… MO               1834        140       1694          1           1
+#>  3 Miss… MO               1581        135       1446          1           1
+#>  4 Miss… MO               1327        121       1206          1           1
+#>  5 Miss… MO               1039        124        915          1           1
+#>  6 Miss… MO                903         92        811          1           1
+#>  7 Miss… MO                838         98        740          1           1
+#>  8 Miss… MO                670         90        580          1          NA
+#>  9 Miss… MO                502         72        430          1          NA
+#> 10 Miss… MO                356         62        294          1          NA
+#> 11 Miss… MO                255         55        200         NA          NA
+#> 12 Miss… MO                183         47        136         NA          NA
+#> 13 Miss… MO                106         47         59         NA          NA
+#> 14 Miss… MO                 90         38         52         NA          NA
+#> 15 Miss… MO                 69         NA         NA         NA          NA
 #> # … with 43 more variables: ages_Cass <dbl>, ages_Greene <dbl>,
 #> #   ages_Henry <dbl>, ages_Jackson <dbl>, ages_Lafayette <dbl>, `ages_St.
 #> #   Charles County` <dbl>, `ages_St. Louis City` <dbl>, `ages_St. Louis
@@ -63,20 +64,20 @@ suppressMessages(readr::read_csv("data/mo-total.csv"))
 
 ## county data
 suppressMessages(readr::read_csv("data/mo-county.csv"))
-#> # A tibble: 3,779 x 6
+#> # A tibble: 3,897 x 6
 #>    county    total state_lab other_lab  fips timestamp          
 #>    <chr>     <dbl>     <dbl>     <dbl> <dbl> <dttm>             
-#>  1 Adair         6         0         6 29001 2020-04-03 17:16:01
-#>  2 Andrew        0         0         0 29003 2020-04-03 17:16:01
-#>  3 Atchison      1         1         0 29005 2020-04-03 17:16:01
-#>  4 Audrain       0         0         0 29007 2020-04-03 17:16:01
-#>  5 Barry         1         0         1 29009 2020-04-03 17:16:01
-#>  6 Barton        0         0         0 29011 2020-04-03 17:16:01
-#>  7 Bates         2         0         2 29013 2020-04-03 17:16:01
-#>  8 Benton        3         0         3 29015 2020-04-03 17:16:01
-#>  9 Bollinger     1         0         1 29017 2020-04-03 17:16:01
-#> 10 Boone        69         2        67 29019 2020-04-03 17:16:01
-#> # … with 3,769 more rows
+#>  1 Adair         8         0         8 29001 2020-04-03 21:16:01
+#>  2 Andrew        0         0         0 29003 2020-04-03 21:16:01
+#>  3 Atchison      1         1         0 29005 2020-04-03 21:16:01
+#>  4 Audrain       0         0         0 29007 2020-04-03 21:16:01
+#>  5 Barry         1         0         1 29009 2020-04-03 21:16:01
+#>  6 Barton        0         0         0 29011 2020-04-03 21:16:01
+#>  7 Bates         3         0         3 29013 2020-04-03 21:16:01
+#>  8 Benton        3         0         3 29015 2020-04-03 21:16:01
+#>  9 Bollinger     1         0         1 29017 2020-04-03 21:16:01
+#> 10 Boone        74         3        71 29019 2020-04-03 21:16:01
+#> # … with 3,887 more rows
 ```
 
 ![](img/timeseries.png)
